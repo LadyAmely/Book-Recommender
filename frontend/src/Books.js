@@ -1,8 +1,9 @@
 
-import './books.css';
+import './bookStyle.css';
 import Header from './Header';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Footer from "./Footer";
 
 function BookList() {
     const [books, setBooks] = useState([]);
@@ -55,7 +56,7 @@ function BookList() {
                     <option value="Romance">Romance</option>
                     <option value="Drama">Drama</option>
                     <option value="Adventure">Adventure</option>
-                    {/* Dodaj inne gatunki, jeśli są */}
+
                 </select>
                 <select value={sortOption} onChange={e => setSortOption(e.target.value)}>
                     <option value="Title">Title</option>
@@ -72,11 +73,14 @@ function BookList() {
                     />
                 ))}
             </div>
+
+
+        <Footer/>
         </div>
     );
 }
 
-function BookCard({ title, author, rating }) {
+function BookCard({title, author, rating}) {
     return (
         <div className="book-card">
             <h3>{title}</h3>

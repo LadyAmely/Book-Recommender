@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.dark-gradient-footer {
+    background: linear-gradient(90deg, #333, #000);
+    color: #ecf0f1;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.dark-gradient-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.dark-gradient-footer .footer-links {
+    margin: 10px 0;
+}
+
+.dark-gradient-footer .footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.dark-gradient-footer .footer-links a:hover {
+    color: #007bff;
+}
+
+.dark-gradient-footer .social-icons {
+    margin-top: 10px;
+}
+
+.dark-gradient-footer .social-icons a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 8px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #555;
+    border-radius: 50%;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-gradient-footer .social-icons a:hover {
+    background-color: #75a7d8;
+    color: #fff;
+}

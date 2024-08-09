@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.dark-gradient-header {
+    background: linear-gradient(90deg, #333, #000);
+    padding: 20px 0;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dark-gradient-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.dark-gradient-header .logo {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.dark-gradient-header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.dark-gradient-header .nav-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-gradient-header .nav-links a:hover {
+    background-color: #555;
+    color: #ff6f61;
+}

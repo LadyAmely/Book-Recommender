@@ -1,9 +1,9 @@
 import React from 'react';
-import './dashboard.css';
+import './header.css';
 
 function Header() {
     return (
-        <header>
+        <header className="dark-gradient-header">
             <nav>
                 <div className="container">
                     <h1>Book Recommender</h1>
