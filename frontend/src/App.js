@@ -1,13 +1,23 @@
 
 import React from 'react';
-import User from './User';
+import Dashboard from "./Dashboard";
+import Books from "./Books";
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 
 function App() {
   return (
-    <div className="App">
-        <User/>
-    </div>
+
+
+      <Router>
+          <div className="App">
+                <Routes>
+                    <Route path="/" element={<Dashboard/>}/>
+                    <Route path="/home" element={<Dashboard/>}/>
+                    <Route path="/books" element={<Books/>}/>
+                </Routes>
+          </div>
+      </Router>
   );
 }
 
