@@ -3,21 +3,24 @@ import './header.css';
 
 function Header() {
     return (
-        <header className="dark-gradient-header">
+
+    <div>
+        <header>
             <nav>
-                <div className="container">
-                    <h1>Book Recommender</h1>
-                    <ul>
-                        <li><a href="/Home">Home</a></li>
-                        <li><a href="/Books">Books</a></li>
-                        <li><a href="#">Recommendations</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Logout</a></li>
-                    </ul>
-                </div>
+                <a href="/" className="logo">Book Recommender</a>
+                <ul>
+                    <li><a href="/home">Home Page</a></li>
+                    <li><a href="/books">Book Catalog</a></li>
+                    <li><a href="#">Recommendations</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
             </nav>
         </header>
-    );
+    </div>
+)
+    ;
 }
 
 export default Header;
