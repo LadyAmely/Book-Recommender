@@ -70,6 +70,7 @@ function BookList() {
                         title={book.title}
                         author={book.author}
                         rating={book.rating}
+                        image_path={book.image}
                     />
                 ))}
             </div>
@@ -80,12 +81,16 @@ function BookList() {
     );
 }
 
-function BookCard({title, author, rating}) {
+function BookCard({title, author, rating, image_path}) {
     return (
         <div className="book-card">
-            <h3>{title}</h3>
-            <p>{author}</p>
-            <p>Rating: {rating}</p>
+
+            <img src={image_path} alt={title} className="book-image"/>
+            <div className="book-info">
+                <h3>{title}</h3>
+                <p>{author}</p>
+                <p>Rating: {rating}</p>
+            </div>
         </div>
     );
 }

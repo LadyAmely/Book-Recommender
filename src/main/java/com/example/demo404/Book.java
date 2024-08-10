@@ -15,14 +15,16 @@ public class Book {
     private String genre;
 
     private Float rating;
+    private String image;
 
     public Book(){}
 
-    public Book(String title, String author, String genre, Float rating){
+    public Book(String title, String author, String genre, Float rating, String image){
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.rating = rating;
+        this.image = image;
     }
 
     public Long getId() {
@@ -63,5 +65,13 @@ public class Book {
 
     public void setRating(Float rating){
         this.rating = rating;
+    }
+
+    public String getImage(){
+        return image;
+    }
+
+    public void setImage(String image){
+        this.image = image;
     }
 }
