@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 
 import "./register.css";
 
@@ -11,6 +12,7 @@ function SignIn() {
     const [message, setMessage] = useState('');
 
     const navigate = useNavigate();
+    const { login } = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -24,6 +26,7 @@ function SignIn() {
             });
             const data = await response.json();
             if (data.message === "Login successful") {
+                login();
                 navigate('/home');
             } else {
                 setMessage("bad password or email");

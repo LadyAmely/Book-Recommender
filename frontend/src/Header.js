@@ -1,7 +1,19 @@
 import React from 'react';
 import './header.css';
+import { AuthProvider, useAuth } from './AuthContext';
+import {useNavigate} from "react-router-dom";
 
 function Header() {
+
+    const { isAuthenticated, logout } = useAuth();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logout();
+        navigate('/');
+    };
+
+
     return (
 
     <div>
@@ -14,7 +26,7 @@ function Header() {
                     <li><a href="#">Recommendations</a></li>
                     <li><a href="#">Profile</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    {isAuthenticated && <li><a href="/" onClick={handleLogout}>Logout</a></li>}
                 </ul>
             </nav>
         </header>

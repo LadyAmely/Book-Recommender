@@ -3,8 +3,21 @@ import './dashboard.css'
 import Header from './Header';
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
+
 
 function Dashboard() {
+
+    const { isAuthenticated } = useAuth();
+    const navigate = useNavigate();
+
+    React.useEffect(() => {
+        if (!isAuthenticated) {
+            navigate('/');
+        }
+    }, [isAuthenticated, navigate]);
+
     const [name, setName] = useState('');
 
     useEffect(() => {

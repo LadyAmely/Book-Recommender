@@ -5,11 +5,15 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Footer from "./Footer";
 
+
+
 function BookList() {
     const [books, setBooks] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [genreFilter, setGenreFilter] = useState('All');
     const [sortOption, setSortOption] = useState('Title');
+
+
 
     useEffect(() => {
         axios.get('http://localhost:8081/books')
