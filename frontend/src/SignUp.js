@@ -5,13 +5,15 @@ import './register.css';
 function SignUp() {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:8081/api/users', { name, password })
+        axios.post('http://localhost:8081/api/users', { name, email, password })
             .then(response => {
                 console.log(response.data);
                 setName('');
+                setEmail('');
                 setPassword('');
             })
             .catch(error => {
@@ -47,15 +49,13 @@ function SignUp() {
                         <input type="username" value={name} onChange={(e) => setName(e.target.value)}/>
 
                         <label htmlFor="email">Address Email</label>
-                        <input type="email" id="email" name="email" required/>
+                        <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                         <label>Password</label>
                         <input
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                        <label htmlFor="confirm-password">Confirm password</label>
-                        <input type="password" id="confirm-password" name="confirm-password" required/>
                         <button type="submit">Submit</button>
                     </form>
                     <p>Have an account? <a href="/login">Sign In</a></p>

@@ -9,12 +9,10 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-do
 
 function App() {
   return (
-
-
       <Router>
           <div className="App">
                 <Routes>
-                    <Route path="/" element={<Dashboard/>}/>
+                    <Route path="/" element={<SignIn/>}/>
                     <Route path="/home" element={<Dashboard/>}/>
                     <Route path="/books" element={<Books/>}/>
                     <Route path="/logout" element={<SignIn/>}/>
