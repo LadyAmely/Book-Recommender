@@ -2,6 +2,8 @@ package com.example.demo404;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name="users_table")
 public class User {

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preferences</title>
+    <script>
+        function submitForm(bookId) {
+            document.getElementById('bookId').value = bookId;
+            document.getElementById('preferencesForm').submit();
+        }
+    </script>
+</head>
+<body>
+<h1>Find User Preferences by Book ID</h1>
+<form id="preferencesForm" action="/preferences-books/add" method="post">
+    <input type="hidden" id="bookId" name="bookId" required>
+</form>
+
+<div th:each="book : ${books}">
+    <button type="button" th:text="'Book ID ' + ${book.id}" th:onclick="'submitForm(' + ${book.id} + ')'"></button>
+</div>
+
+<p th:text="${message}"></p>
+</body>
+</html>

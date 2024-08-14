@@ -2,6 +2,8 @@ package com.example.demo404;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name="books")
 public class Book {
@@ -26,6 +28,7 @@ public class Book {
         this.rating = rating;
         this.image = image;
     }
+
 
     public Long getId() {
         return id;

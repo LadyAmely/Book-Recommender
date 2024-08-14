@@ -1,19 +1,16 @@
 
-import './bookStyle.css';
-import Header from './Header';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Footer from "./Footer";
-
-
+import './bookStyle.css';
+import Header from './Header';
+import Footer from './Footer';
+import BookCard from './BookCard';
 
 function BookList() {
     const [books, setBooks] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [genreFilter, setGenreFilter] = useState('All');
     const [sortOption, setSortOption] = useState('Title');
-
-
 
     useEffect(() => {
         axios.get('http://localhost:8081/books')
@@ -42,7 +39,7 @@ function BookList() {
 
     return (
         <div>
-            <Header/>
+            <Header />
             <div>
                 <input
                     type="text"
@@ -60,7 +57,6 @@ function BookList() {
                     <option value="Romance">Romance</option>
                     <option value="Drama">Drama</option>
                     <option value="Adventure">Adventure</option>
-
                 </select>
                 <select value={sortOption} onChange={e => setSortOption(e.target.value)}>
                     <option value="Title">Title</option>
@@ -71,6 +67,7 @@ function BookList() {
                 {filteredBooks.map(book => (
                     <BookCard
                         key={book.book_id}
+                        bookId={book.book_id}
                         title={book.title}
                         author={book.author}
                         rating={book.rating}
@@ -78,23 +75,7 @@ function BookList() {
                     />
                 ))}
             </div>
-
-
-        <Footer/>
-        </div>
-    );
-}
-
-function BookCard({title, author, rating, image_path}) {
-    return (
-        <div className="book-card">
-
-            <img src={image_path} alt={title} className="book-image"/>
-            <div className="book-info">
-                <h3>{title}</h3>
-                <p>{author}</p>
-                <p>Rating: {rating}</p>
-            </div>
+            <Footer />
         </div>
     );
 }
