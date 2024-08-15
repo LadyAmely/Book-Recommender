@@ -122,6 +122,107 @@ main {
     margin-bottom: 5px;
 }
 
+.profile {
+    margin-bottom: 20px;
+}
+
+.favorites {
+    margin-bottom: 20px;
+}
+
+.favorites, .top-rated-books, .recommended-books {
+    margin-bottom: 10px;
+}
+
+.favorites h3, .top-rated-books h3, .recommended-books h3 {
+    margin-bottom: 10px;
+}
+
+.top-rated-books grid{
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.categories {
+    margin-bottom: 20px;
+}
+
+.categories-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.category-card h4 {
+    margin: 10px 0;
+}
+
+.books-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card h4 {
+    margin: 10px 0;
+}
+
+.card button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card button:hover {
+    background: #555;
+}
+
 
 footer {
     background: #333;

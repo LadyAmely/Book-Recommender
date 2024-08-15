@@ -23,8 +23,6 @@ function Header() {
                 <ul>
                     <li><a href="/home">Home Page</a></li>
                     <li><a href="/books">Book Catalog</a></li>
-                    <li><a href="#">Recommendations</a></li>
-                    <li><a href="#">Profile</a></li>
                     <li><a href="/contact">Contact</a></li>
                     {isAuthenticated && <li><a href="/" onClick={handleLogout}>Logout</a></li>}
                 </ul>
