@@ -5,6 +5,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
+import FavouriteBook from './FavouriteBook';
 
 
 function Dashboard() {
@@ -18,12 +19,14 @@ function Dashboard() {
         }
     }, [isAuthenticated, navigate]);
 
-    const [name, setName] = useState('');
+    const [books, setBooks] = useState([]);
+
 
     useEffect(() => {
-        axios.get('http://localhost:8081/api/getAll')
+        axios.get('http://localhost:8081/preferences-books/all')
             .then(response => {
-                setName(response.data);
+                setBooks(response.data);
+
             })
             .catch(error => {
                 console.error('There was an error fetching the books!', error);
@@ -38,6 +41,21 @@ function Dashboard() {
                         <h2>Welcome, !</h2>
                         <p>Here are some personalized book recommendations for you:</p>
                     </section>
+                </div>
+                <div className="books-grid">
+                    {books.map(book => (
+                        <FavouriteBook
+                            title={book.bookTitle}
+                            author={book.author}
+                            rating={book.rating}
+                            image_path={book.image}
+
+                        />
+                    ))}
+
+
+
+
                 </div>
             </main>
         </div>

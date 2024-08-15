@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function BookCard({ title, author, rating, image_path }) {
+function FavouriteBook({ title, author, rating, image_path }) {
     const [isAdded, setIsAdded] = useState(false);
 
     useEffect(() => {
@@ -36,16 +36,9 @@ function BookCard({ title, author, rating, image_path }) {
                 <h3>{title}</h3>
                 <p>{author}</p>
                 <p>Rating: {rating}</p>
-                <button
-                    onClick={handleClick}
-                    className={isAdded ? 'added' : ''}
-                    disabled={isAdded}
-                >
-                    {isAdded ? 'Added to favourites' : 'Add to favourites'}
-                </button>
             </div>
         </div>
     );
 }
 
-export default BookCard;
+export default FavouriteBook;
