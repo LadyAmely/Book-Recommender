@@ -7,6 +7,9 @@ import java.util.Optional;
 public interface UserPreferencesRepository extends JpaRepository<UserPreferences, Long> {
 
     Optional<UserPreferences> findByBookTitle(String bookTitle);
+    void deleteByBookTitle(String bookTitle);
+
+
 
 
 }

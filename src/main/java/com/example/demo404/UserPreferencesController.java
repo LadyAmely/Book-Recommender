@@ -34,4 +34,21 @@ public class UserPreferencesController {
             return ResponseEntity.ok("User Preferences created for Book Title: " + bookTitle);
         }
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteBook(@PathVariable Long id) {
+        userPreferencesService.deleteBook(id);
+    }
+
+    @DeleteMapping("/booksDelete")
+    public ResponseEntity<?> deleteBook(@RequestParam String title) {
+        try {
+            userPreferencesService.deleteBookByTitle(title);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred: " + e.getMessage());
+        }
+    }
+
+
 }

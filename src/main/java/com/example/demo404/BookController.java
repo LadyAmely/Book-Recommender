@@ -21,5 +21,13 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
+    @GetMapping("/recommendations")
+    public List<Book> recommendedBooks(String author){
+
+        return bookService.recommendBooksByAuthor("Andrzej Sapkowski");
+    }
+
+
+
 
 }

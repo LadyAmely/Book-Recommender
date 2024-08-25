@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function BookCard({ title, author, rating, image_path }) {
+function BookCard({id, title, author, rating, image_path }) {
     const [isAdded, setIsAdded] = useState(false);
 
     useEffect(() => {
@@ -9,9 +9,29 @@ function BookCard({ title, author, rating, image_path }) {
         setIsAdded(!!addedBooks[title]);
     }, [title]);
 
+
+    const handleRemoveClick = () => {
+        axios.delete(`http://localhost:8081/preferences-books/booksDelete`, {
+            params: { title }
+        })
+            .then(response => {
+                console.log(response.data);
+                setIsAdded(false);
+
+                const addedBooks = JSON.parse(localStorage.getItem('addedBooks')) || {};
+                delete addedBooks[title];
+                localStorage.setItem('addedBooks', JSON.stringify(addedBooks));
+            })
+            .catch(error => {
+                console.error('There was an error removing the book from favourites!', error);
+            });
+    };
+
+
     const handleClick = () => {
         axios.post('http://localhost:8081/preferences-books/added_books', null, {
             params: {
+                id: id,
                 bookTitle: title,
                 image: image_path,
                 author: author,
@@ -42,6 +62,13 @@ function BookCard({ title, author, rating, image_path }) {
                     disabled={isAdded}
                 >
                     {isAdded ? 'Added to favourites' : 'Add to favourites'}
+                </button>
+                <button
+                    onClick={handleRemoveClick}
+                    className="remove"
+                    disabled={!isAdded}
+                >
+                    Remove from favourites
                 </button>
             </div>
         </div>

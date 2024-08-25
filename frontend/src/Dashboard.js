@@ -20,7 +20,19 @@ function Dashboard() {
 
     const [books, setBooks] = useState([]);
     const [topRatedBooks, setTopRatedBooks] = useState([]);
+    const [recommendedBooks, setRecommendedBooks] = useState([]);
 
+
+    useEffect(() =>{
+
+        axios.get('http://localhost:8081/books/recommendations')
+            .then(response =>{
+                setRecommendedBooks(response.data);
+            })
+            .catch(error => {
+                console.error('There was an error fetching the books!', error);
+            });
+    })
 
     useEffect(() => {
         axios.get('http://localhost:8081/preferences-books/all')
@@ -95,6 +107,15 @@ function Dashboard() {
                 <section className="recommended-books">
                     <h3>Recommendations for you</h3>
                     <div className="books-grid">
+                        {recommendedBooks.map(book =>(
+                            <FavouriteBook
+                                title={book.bookTitle}
+                                author={book.author}
+                                rating={book.rating}
+                                image_path={book.image}
+
+                            />
+                        ))}
 
                     </div>
                 </section>

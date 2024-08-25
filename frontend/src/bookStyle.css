@@ -87,3 +87,28 @@ button.added {
     transform: scale(1);
     cursor: default;
 }
+
+
+button.remove {
+    background: #d9534f;
+    color: #ffffff;
+    border: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button.remove:hover {
+    background: #c9302c;
+    transform: scale(1.05);
+}
+
+button.remove:active {
+    background: #ac2925;
+    transform: scale(0.95);
+}
+

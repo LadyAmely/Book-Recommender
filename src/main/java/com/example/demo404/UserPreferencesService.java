@@ -1,5 +1,6 @@
 package com.example.demo404;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +34,14 @@ public class UserPreferencesService {
 
     public List<UserPreferences> getAllBooksPreferred() {
         return userPreferencesRepository.findAll();
+    }
+
+    public void deleteBook(Long id) {
+        userPreferencesRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void deleteBookByTitle(String bookTitle) {
+        userPreferencesRepository.deleteByBookTitle(bookTitle);
     }
 }
