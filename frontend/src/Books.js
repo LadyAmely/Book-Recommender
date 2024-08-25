@@ -40,7 +40,7 @@ function BookList() {
     return (
         <div>
             <Header />
-            <div>
+            <div className="books-select">
                 <input
                     type="text"
                     placeholder="Search by title or author"
@@ -64,6 +64,7 @@ function BookList() {
                 </select>
             </div>
             <div className="books-grid">
+
                 {filteredBooks.map(book => (
                     <BookCard
                         key={book.book_id}
@@ -75,7 +76,7 @@ function BookList() {
                     />
                 ))}
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 }

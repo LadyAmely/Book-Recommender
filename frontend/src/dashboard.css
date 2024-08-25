@@ -4,13 +4,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+
+
 }
 
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #121212;
+}
+
+p, h1, h2, h3, h4, h5, h6, span, a {
+    background-color: transparent;
+
 }
 
 .container {
@@ -34,20 +42,24 @@ nav {
 
 nav h1 {
     margin-left: 20px;
+    background-color: transparent;
 }
 
 nav ul {
     list-style: none;
+    background-color: transparent;
 }
 
 nav ul li {
     display: inline;
     margin-left: 20px;
+    background-color: transparent;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    background-color: transparent;
 }
 
 nav ul li a:hover {
