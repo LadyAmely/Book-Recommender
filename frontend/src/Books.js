@@ -39,7 +39,52 @@ function BookList() {
 
     return (
         <div>
-            <Header />
+            <Header/>
+
+
+            <section className="hero">
+
+                <div className="background-images">
+                    <img
+                        src="https://4.bp.blogspot.com/-inx65pY1b34/WWoeJbZMf_I/AAAAAAAAEuo/VLBJHNFGycwrMiPFhMHJy2JYaGxo_xpmwCLcBGAs/s1600/sword-of-destiny.jpg"
+                        alt="Opis książki"/>
+                    <img
+                        src="https://th.bing.com/th/id/R.972a350b66aca649664803ca82769f70?rik=ufTdY%2bHqzFbB1g&pid=ImgRaw&r=0"
+                        alt="book2"/>
+                    <img
+                        src="https://th.bing.com/th/id/OIP.b9iGpqjgfFN-8Ssf0plE0QAAAA?rs=1&pid=ImgDetMain"
+                        alt="Opis książki"/>
+                    <img
+                        src="https://th.bing.com/th/id/OIP.pidsoK02BpY_XZ-_jvhvpAHaLL?rs=1&pid=ImgDetMain"
+                        alt="book2"/>
+                    <img
+                        src="https://th.bing.com/th/id/R.8db5eca240935cb2a6656805b6cd02dd?rik=gaFZWf1I4AZAOg&pid=ImgRaw&r=0"
+                        alt="Opis książki"/>
+                    <img
+                        src="https://i.thenile.io/r1000/9781473231115.jpg?r=5f351812ea51b"
+                        alt="book2"/>
+                    <img
+                        src="https://th.bing.com/th/id/R.414921a7f9d8f801c43918cf7051e287?rik=chnDj8SUsO2eqQ&pid=ImgRaw&r=0"
+                        alt="Opis książki"/>
+                    <img
+                        src="https://th.bing.com/th/id/OIP.x0R84Uu_DzJ1XbeOskXZnAHaLU?rs=1&pid=ImgDetMain"
+                        alt="book2"/>
+                    <img
+                        src="https://th.bing.com/th/id/OIP.hFkaRKq9lN7d0Ah3lDfg8QAAAA?rs=1&pid=ImgDetMain"
+                        alt="Opis książki"/>
+                    <img
+                        src="https://th.bing.com/th/id/OIP.lquziSMyKCRpXkb_obsM6AHaLd?rs=1&pid=ImgDetMain"
+                        alt="book2"/>
+
+
+                </div>
+
+                <h2>Explore Our Exclusive Book Collection</h2>
+                <p>Find your next favorite read with us. Choose from a variety of genres and authors.</p>
+                <button>Start Browsing</button>
+            </section>
+
+
             <div className="books-select">
                 <input
                     type="text"
@@ -48,7 +93,7 @@ function BookList() {
                     onChange={e => setSearchTerm(e.target.value)}
                 />
                 <select value={genreFilter} onChange={e => setGenreFilter(e.target.value)}>
-                    <option value="All">All</option>
+                <option value="All">All</option>
                     <option value="Dystopian">Dystopian</option>
                     <option value="Fiction">Fiction</option>
                     <option value="Fantasy">Fantasy</option>
