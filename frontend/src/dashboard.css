@@ -1,14 +1,9 @@
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-
-
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -68,7 +63,7 @@ nav ul li a:hover {
 
 
 main {
-    padding: 20px 0;
+    padding: 0px 0;
 }
 
 .welcome {
@@ -143,7 +138,8 @@ main {
 }
 
 .favorites, .top-rated-books, .recommended-books {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    background-color: #121212;
 }
 
 .favorites h3, .top-rated-books h3, .recommended-books h3 {
@@ -199,6 +195,7 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 0;
 }
 
 .card {
@@ -241,4 +238,123 @@ footer {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1f1f1f;
+    height: 60vh;
+    overflow: hidden;
+    margin-top: 0;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #bbbbbb;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+.hero button {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #ab47bc;
+    box-shadow: 0 5px 15px rgba(106, 27, 154, 0.5);
+    transform: scale(1.05);
+}
+
+
+.background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    z-index: 0;
+
+}
+
+.background-images img {
+    flex: 1 0 auto;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.5;
+    filter: brightness(70%);
+    transition: opacity 1s ease-in-out;
+
+}
+
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+.background-images {
+    animation: slide 15s linear infinite;
+}
+
+
+.section {
+    background-color: #121212;
+    padding: 40px;
+    text-align: center;
+}
+
+
+.section h3 {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.section h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #8A2BE2;
+    margin: 10px auto 0;
+}
+
+
+.section h3 {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }

@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import FavouriteBook from './FavouriteBook';
+import Footer from './Footer';
 
 function Dashboard() {
 
@@ -60,16 +61,56 @@ function Dashboard() {
     return (
         <div className="dashboard-main">
             <Header/>
-            <main>
-                <div className="container">
-                    <section className="profile">
-                        <h2>Welcome, !</h2>
-                        <p>Here are some personalized book recommendations for you:</p>
-                    </section>
-                </div>
+
+
+                <section className="hero">
+
+                    <div className="background-images">
+                        <img
+                            src="https://4.bp.blogspot.com/-inx65pY1b34/WWoeJbZMf_I/AAAAAAAAEuo/VLBJHNFGycwrMiPFhMHJy2JYaGxo_xpmwCLcBGAs/s1600/sword-of-destiny.jpg"
+                            alt="Opis książki"/>
+                        <img
+                            src="https://th.bing.com/th/id/R.972a350b66aca649664803ca82769f70?rik=ufTdY%2bHqzFbB1g&pid=ImgRaw&r=0"
+                            alt="book2"/>
+                        <img
+                            src="https://th.bing.com/th/id/OIP.b9iGpqjgfFN-8Ssf0plE0QAAAA?rs=1&pid=ImgDetMain"
+                            alt="Opis książki"/>
+                        <img
+                            src="https://th.bing.com/th/id/OIP.pidsoK02BpY_XZ-_jvhvpAHaLL?rs=1&pid=ImgDetMain"
+                            alt="book2"/>
+                        <img
+                            src="https://th.bing.com/th/id/R.8db5eca240935cb2a6656805b6cd02dd?rik=gaFZWf1I4AZAOg&pid=ImgRaw&r=0"
+                            alt="Opis książki"/>
+                        <img
+                            src="https://i.thenile.io/r1000/9781473231115.jpg?r=5f351812ea51b"
+                            alt="book2"/>
+                        <img
+                            src="https://th.bing.com/th/id/R.414921a7f9d8f801c43918cf7051e287?rik=chnDj8SUsO2eqQ&pid=ImgRaw&r=0"
+                            alt="Opis książki"/>
+                        <img
+                            src="https://th.bing.com/th/id/OIP.x0R84Uu_DzJ1XbeOskXZnAHaLU?rs=1&pid=ImgDetMain"
+                            alt="book2"/>
+                        <img
+                            src="https://th.bing.com/th/id/OIP.hFkaRKq9lN7d0Ah3lDfg8QAAAA?rs=1&pid=ImgDetMain"
+                            alt="Opis książki"/>
+                        <img
+                            src="https://th.bing.com/th/id/OIP.lquziSMyKCRpXkb_obsM6AHaLd?rs=1&pid=ImgDetMain"
+                            alt="book2"/>
+
+
+                    </div>
+
+                    <h2>Explore Our Exclusive Book Collection</h2>
+                    <p>Find your next favorite read with us. Choose from a variety of genres and authors.</p>
+                    <button>Start Browsing</button>
+                </section>
 
                 <section className="top-rated-books">
-                    <h3>Top 10 rated books</h3>
+
+                    <div className="section">
+                        <h3>Top 10 rated books</h3>
+                    </div>
+
                     <div className="books-grid">
                         {topRatedBooks.map(book => (
                             <FavouriteBook
@@ -87,7 +128,10 @@ function Dashboard() {
                 </section>
 
                 <section className="favorites">
-                    <h3>Your Favorite Books</h3>
+                    <div className="section">
+                        <h3>Your Favorite Books</h3>
+                    </div>
+
                     <div className="books-grid">
                         {books.map(book => (
                             <FavouriteBook
@@ -105,9 +149,12 @@ function Dashboard() {
 
 
                 <section className="recommended-books">
-                    <h3>Recommendations for you</h3>
+                    <div className="section">
+                        <h3>Recommendations for you</h3>
+                    </div>
+
                     <div className="books-grid">
-                        {recommendedBooks.map(book =>(
+                        {recommendedBooks.map(book => (
                             <FavouriteBook
                                 title={book.bookTitle}
                                 author={book.author}
@@ -119,11 +166,9 @@ function Dashboard() {
 
                     </div>
                 </section>
-            </main>
 
-            <footer>
-                <p>&copy; 2024 Book Recommender. All Rights Reserved.</p>
-            </footer>
+
+        <Footer/>
         </div>
     );
 }
