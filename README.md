@@ -34,4 +34,4 @@ The Favorites section is personalized, allowing users to curate a list of books 
 
 This project is licensed under the MIT License.
 
-![Book-Recommender](https://github.com/LadyAmely/Spring/blob/master/book-recommender-image.png)
+![Book-Recommender](https://github.com/LadyAmely/Book-Recommender/blob/master/book-recomender-img.png)
