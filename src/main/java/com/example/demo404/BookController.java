@@ -12,6 +12,7 @@ public class BookController {
 
     private final BookService bookService;
 
+
     public BookController(BookService bookService) {
         this.bookService = bookService;
     }
@@ -21,11 +22,7 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("/recommendations")
-    public List<Book> recommendedBooks(String author){
 
-        return bookService.recommendBooksByAuthor("Andrzej Sapkowski");
-    }
 
 
 

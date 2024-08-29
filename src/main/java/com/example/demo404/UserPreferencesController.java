@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,9 +14,11 @@ import java.util.Optional;
 public class UserPreferencesController {
 
     private final UserPreferencesService userPreferencesService;
+    private final BookService bookService;
 
-    public UserPreferencesController(UserPreferencesService userPreferencesService) {
+    public UserPreferencesController(UserPreferencesService userPreferencesService, BookService bookService) {
         this.userPreferencesService = userPreferencesService;
+        this.bookService = bookService;
     }
 
     @GetMapping("/all")
@@ -49,6 +52,19 @@ public class UserPreferencesController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred: " + e.getMessage());
         }
     }
+
+
+
+    @GetMapping("/recommendBooks")
+    public List<Book> recommendBooksByAuthor() {
+        List<UserPreferences> favoriteBooks = userPreferencesService.getAllBooksPreferred();
+        List<Book> books = bookService.getAllBooks();
+        return userPreferencesService.recommendBooksByAuthor(favoriteBooks, books);
+    }
+
+
+
+
 
 
 }

@@ -26,7 +26,7 @@ function Dashboard() {
 
     useEffect(() =>{
 
-        axios.get('http://localhost:8081/books/recommendations')
+        axios.get('http://localhost:8081/preferences-books/recommendBooks')
             .then(response =>{
                 setRecommendedBooks(response.data);
             })
@@ -50,7 +50,7 @@ function Dashboard() {
         axios.get('http://localhost:8081/books')
             .then(response => {
                 const sortedBooks = response.data.sort((a, b) => b.rating - a.rating);
-                setTopRatedBooks(sortedBooks.slice(0, 10)); // Select top 10 books by rating
+                setTopRatedBooks(sortedBooks.slice(0, 10));
             })
             .catch(error => {
                 console.error('There was an error fetching the top-rated books!', error);
@@ -114,7 +114,7 @@ function Dashboard() {
                     <div className="books-grid">
                         {topRatedBooks.map(book => (
                             <FavouriteBook
-                                title={book.bookTitle}
+                                title={book.title}
                                 author={book.author}
                                 rating={book.rating}
                                 image_path={book.image}
@@ -156,7 +156,7 @@ function Dashboard() {
                     <div className="books-grid">
                         {recommendedBooks.map(book => (
                             <FavouriteBook
-                                title={book.bookTitle}
+                                title={book.title}
                                 author={book.author}
                                 rating={book.rating}
                                 image_path={book.image}

@@ -2,7 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f4f4f9, #e6e6ea);
+    background-color: #121212;
     color: #333;
 }
 
@@ -48,14 +48,11 @@ main {
 }
 
 .registration-form {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, rgba(128, 128, 128, 0.7) 0%, rgba(75, 0, 130, 0.7) 100%);
     color: #333333;
     padding: 40px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 0px auto;
-    margin-left: 1000px;
-    margin-right: 10px;
-    margin-top: 60px;
+    margin: 60px auto;
     max-width: 550px;
     height: 600px;
     border-radius: 8px;
@@ -64,13 +61,22 @@ main {
 }
 
 .registration-form p {
-    color: #666666;
+    color: #ffffff;
     margin-top: 10px;
 }
 
 .registration-form h1 {
     margin-bottom: 20px;
-    color: #333333;
+    color: #ffffff;
+}
+
+.registration-form a {
+    color: #c0a8e4;
+}
+
+a:hover {
+    color: #8c3cff;
+    text-decoration: underline;
 }
 
 .registration-form form {
@@ -80,7 +86,7 @@ main {
 
 .registration-form label {
     margin-bottom: 5px;
-    color: #333333;
+    color: #ffffff;
 }
 
 .registration-form input {
@@ -95,7 +101,7 @@ main {
 .registration-form button[type="submit"] {
     padding: 10px;
     border: none;
-    background-color: #6a0dad;
+    background-color: #1c1918;
     color: #ffffff;
     font-size: 16px;
     cursor: pointer;

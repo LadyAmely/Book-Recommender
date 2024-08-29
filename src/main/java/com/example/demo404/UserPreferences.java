@@ -23,6 +23,7 @@ public class UserPreferences {
     @Column(name="rating", nullable = false)
     private Float rating;
 
+
     public UserPreferences(){
 
     }
@@ -32,6 +33,7 @@ public class UserPreferences {
         this.image = image;
         this.author = author;
         this.rating = rating;
+
     }
 
     public Long getId() {
@@ -72,5 +74,8 @@ public class UserPreferences {
     public void setRating(Float rating){
         this.rating = rating;
     }
+
+
+
 
 }

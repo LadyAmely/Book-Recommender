@@ -2,8 +2,7 @@ package com.example.demo404;
 
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class BookService {
@@ -18,16 +17,6 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-    public List<Book> recommendBooksByAuthor(String author){
 
-        List<Book> recommendedBooks = new ArrayList<>();
-        for(Book book : getAllBooks()){
-
-            if(book.getAuthor().equalsIgnoreCase(author)){
-                recommendedBooks.add(book);
-            }
-        }
-        return recommendedBooks;
-    }
 
 }
