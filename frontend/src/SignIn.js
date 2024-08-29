@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
+import Footer from './Footer';
 
 import "./register.css";
 
@@ -76,9 +77,7 @@ function SignIn() {
             </div>
 
 
-            <footer>
-                <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a></p>
-            </footer>
+          <Footer/>
         </div>
 
 

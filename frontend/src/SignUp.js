@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './register.css';
+import Footer from './Footer';
 
 function SignUp() {
     const [name, setName] = useState('');
@@ -67,9 +68,7 @@ function SignUp() {
             </div>
 
 
-            <footer>
-                <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a></p>
-            </footer>
+           <Footer/>
         </div>
 
 

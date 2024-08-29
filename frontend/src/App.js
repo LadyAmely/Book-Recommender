@@ -7,6 +7,7 @@ import SignUp from './SignUp';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
 import ProtectedRoute from "./ProtectedRoute";
+import Contact from "./Contact";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Router>
               <Routes>
                   <Route path="/" element={<SignIn />} />
+                  <Route path="/contact" element={<Contact/>}/>
                   <Route path="/home" element={<ProtectedRoute element={<Dashboard />} />} />
                   <Route path="/books" element={<Books />} />
                   <Route path="/logout" element={<SignIn/>}/>
