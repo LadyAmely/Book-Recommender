@@ -25,6 +25,15 @@ Users can also sort books by rating, allowing them to quickly find the highest-r
 The app features a "Top Books" section that showcases books with the highest ratings across the platform.
 This section helps users easily discover the most popular and critically acclaimed books.
 
+### Favorites Section:
+
+Users can add books to their "Favorites" section for easy access and future reference.
+The Favorites section is personalized, allowing users to curate a list of books they are interested in reading.
+
+### Recommendation:
+
+A book recommendation system in an app suggests personalized reading options to users based on their preferences and ratings.
+
 ## License
 
 This project is licensed under the MIT License.
