@@ -24,3 +24,9 @@ Users can also sort books by rating, allowing them to quickly find the highest-r
 
 The app features a "Top Books" section that showcases books with the highest ratings across the platform.
 This section helps users easily discover the most popular and critically acclaimed books.
+
+## License
+
+This project is licensed under the MIT License.
+
+![Book-Recommender](https://github.com/LadyAmely/Book-Recommender/blob/master/book-recomender-img.png)
