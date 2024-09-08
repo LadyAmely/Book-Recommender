@@ -37,5 +37,3 @@ A book recommendation system in an app suggests personalized reading options to 
 ## License
 
 This project is licensed under the MIT License.
-
-![Book-Recommender](https://github.com/LadyAmely/Book-Recommender/blob/master/book-recomender-img.png)
