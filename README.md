@@ -38,4 +38,4 @@ A book recommendation system in an app suggests personalized reading options to 
 
 This project is licensed under the MIT License.
 
-[!BookRecomender](https://github.com/LadyAmely/Book-Recommender-Spring-Boot-React.js-PostgreSQL/blob/master/book-recomender-img.png)
+![BookRecomender](https://github.com/LadyAmely/Book-Recommender-Spring-Boot-React.js-PostgreSQL/blob/master/book-recomender-img.png)
